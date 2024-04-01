@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		name="viewport" />
+	<meta content="noindex,nofollow" name="robots" />
+	<meta content="ja" http-equiv="content-language" />
+	<title>列車走行位置画面</title><!-- 列車位置情報表示用CSS -->
+	<link rel="stylesheet" type="text/css" href="css/train_base.css?v=20240401225610" />
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script
+		type="text/javascript">  var g_lineTotal = "50";		// 列の数：Y  var stationPointTop = 0;  var routeid = "1";		//　路線番号  </script>
+	<!-- 列車位置情報表示用JS -->
+	<script type="text/javascript" src="js/train_base.js?v=20240401225610"></script>
+</head>
+
+<body> <input name="JsonCreate" type="hidden" value="20240401225602" /> <input name="HtmlCreate" type="hidden"
+		value="20240401225610" />
+	<div id="wrapper">
+		<div id="header"> <img src="img/header_A.png" /> <a class="modal-open" data-target="modal_stopstation"><span
+					id="stopStationInfo"></span></a>
+			<div id="headertext"> <span class="txtlarge center">【A】奈良線</span> <span
+					class="txtlarge2 center">(大阪難波～近鉄奈良)</span> </div>
+			<div class="center" id="directionfirst">▲大阪難波方面</div>
+		</div>
+		<div id="mainScrollArea"> <img id="mainBgImg" src="img/background1.png" /> <!-- 奈良線のみ 阪神アプリへリンクを追加--> <a
+				class="hanshin-app-link" href="hanshin-train-apl://?dstpage=1&ln_code=2&st_code=121&from=1"></a>
+			<div data-stationcode-row="1"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="2" data-stationcode="n0001"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="3"></div> <a class="modal-open" data-target="modal3-3"> <span class="trainparts"
+					data-x="3" data-y="3"> <img src="img/train_l_06.png" /> </span></a>
+			<div class="modal-content" id="modal3-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								大阪難波【A01】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">2292</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">近鉄日本橋～大阪難波</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="3-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=3&amp;dest=1&amp;type="
+							id="stop-station-3-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="4" data-stationcode="n0002"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="5"></div> <a class="modal-open" data-target="modal5-5"> <span class="trainparts"
+					data-x="5" data-y="5"> <img src="img/train_r_02.png" /> </span></a>
+			<div class="modal-content" id="modal5-5">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype2">快急</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">5233</span> <span class="rightbox">8両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">近鉄日本橋～大阪上本町</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="5-5-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_501_1.html?innerLink=true&amp;senku=1&amp;current=5&amp;dest=24&amp;type="
+							id="stop-station-5-5-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="6" data-stationcode="n0003"></div> <a class="modal-open" data-target="modal6-3">
+				<span class="trainparts" data-x="3" data-y="6"> <img src="img/train_l_05.png" /> </span></a>
+			<div class="modal-content" id="modal6-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype5">区準</span> <span class="station">
+								尼崎【HS09】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">8250</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">大阪上本町２番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="6-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_701_0.html?innerLink=true&amp;senku=1&amp;current=6&amp;dest=233&amp;type="
+							id="stop-station-6-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <a class="modal-open" data-target="modal6-6"> <span class="trainparts" data-x="6" data-y="6"> <img
+						src="img/train_r_other_multi.png" /> </span></a>
+			<div class="modal-content" id="modal6-6">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								高安【D13】 </span> <span class="rightbox trainno">2381</span> <span
+								class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">大阪上本町６番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="6-6-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_1.html?innerLink=true&amp;senku=1&amp;current=6&amp;dest=101&amp;type="
+							id="stop-station-6-6-0"> </iframe>
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype5">区準</span> <span class="station">
+								榛原【D45】 </span> <span class="rightbox trainno">8341</span> <span
+								class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">大阪上本町５番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="6-6-1">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_702_1.html?innerLink=true&amp;senku=1&amp;current=6&amp;dest=124&amp;type="
+							id="stop-station-6-6-1"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="7"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="8" data-stationcode="n0004"></div> <a class="modal-open" data-target="modal8-4">
+				<span class="trainparts" data-x="4" data-y="8"> <img src="img/train_r_06.png" /> </span></a>
+			<div class="modal-content" id="modal8-4">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								東花園【A12】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">2297</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">鶴橋１番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="8-4-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_1.html?innerLink=true&amp;senku=1&amp;current=8&amp;dest=12&amp;type="
+							id="stop-station-8-4-0"> </iframe>
+					</div>
+				</div>
+			</div> <a class="modal-open" data-target="modal8-1"> <span class="trainparts" data-x="1" data-y="8"> <img
+						src="img/train_l_other_06.png" /> </span></a>
+			<div class="modal-content" id="modal8-1">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								大阪上本町【A03】 </span> <span class="rightbox trainno">2282</span> <span
+								class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">鶴橋４番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="8-1-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=8&amp;dest=3&amp;type="
+							id="stop-station-8-1-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="9"></div> <a class="modal-open" data-target="modal9-6"> <span class="trainparts"
+					data-x="6" data-y="9"> <img src="img/train_r_other_03.png" /> </span></a>
+			<div class="modal-content" id="modal9-6">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype3">急行</span> <span class="station">
+								大和八木【B39】 </span> <span class="rightbox trainno">2227</span> <span
+								class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">鶴橋～今里</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="9-6-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_601_1.html?innerLink=true&amp;senku=1&amp;current=9&amp;dest=64&amp;type="
+							id="stop-station-9-6-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="10" data-stationcode="n0005"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="11"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="12" data-stationcode="n0006"></div> <a class="modal-open"
+				data-target="modal12-3"> <span class="trainparts" data-x="3" data-y="12"> <img
+						src="img/train_l_06.png" /> </span></a>
+			<div class="modal-content" id="modal12-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								大阪難波【A01】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">2294</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">布施７番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="12-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=12&amp;dest=1&amp;type="
+							id="stop-station-12-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <a class="modal-open" data-target="modal12-4"> <span class="trainparts" data-x="4" data-y="12"> <img
+						src="img/train_r_05.png" /> </span></a>
+			<div class="modal-content" id="modal12-4">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype5">区準</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">8255</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">布施６番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="12-4-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_701_1.html?innerLink=true&amp;senku=1&amp;current=12&amp;dest=24&amp;type="
+							id="stop-station-12-4-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="13"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="14" data-stationcode="n0083"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="15"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="16" data-stationcode="n0084"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="17"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="18" data-stationcode="n0085"></div> <a class="modal-open"
+				data-target="modal18-4"> <span class="trainparts" data-x="4" data-y="18"> <img
+						src="img/train_r_06.png" /> </span></a>
+			<div class="modal-content" id="modal18-4">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								東花園【A12】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">2295</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">八戸ノ里１番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="18-4-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_1.html?innerLink=true&amp;senku=1&amp;current=18&amp;dest=12&amp;type="
+							id="stop-station-18-4-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="19"></div> <a class="modal-open" data-target="modal19-5"> <span
+					class="trainparts" data-x="5" data-y="19"> <img src="img/train_r_01.png" /> </span></a>
+			<div class="modal-content" id="modal19-5">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> <span
+								class="ltdexpressbuy"><a class="sub-modal-open"
+									data-target="submodal19-5-1">特急券購入</a></span> </p>
+						<p class="margin_low"> <span class="traintype traintype1">特急</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox trainno">5217</span> <span
+								class="rightbox">4両編成</span> </p>
+						<p class="margin_low"> <span class="facilitylabel">シート</span> <span><img class="facilityicon"
+									src="img/facility_ico_10.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_15.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_16.png" /></span> </p>
+						<p class="margin_low"> <span class="facilitylabel">設備</span> <span><img class="facilityicon"
+									src="img/facility_ico_20.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_21.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_24.png" /></span> </p>
+						<p class="carinfo margin_low"></p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">八戸ノ里～若江岩田</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="19-5-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_391_1.html?innerLink=true&amp;senku=1&amp;current=19&amp;dest=24&amp;type="
+							id="stop-station-19-5-0"> </iframe>
+						<div class="modal-content" id="submodal19-5-1">
+							<div class="submodel-header"> <a class="submodal-close">×</a>
+								<h1>特急券購入</h1>
+							</div> <iframe class="submodal-ifinfo"
+								src="./buyticket/buyticket1_391_1.html?innerLink=true&amp;senku=1&amp;current=19&amp;dest=24&amp;type="></iframe>
+						</div>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="20" data-stationcode="n0086"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="21"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="22" data-stationcode="n0087"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="23"></div> <a class="modal-open" data-target="modal23-2"> <span
+					class="trainparts" data-x="2" data-y="23"> <img src="img/train_l_02.png" /> </span></a>
+			<div class="modal-content" id="modal23-2">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype2">快急</span> <span class="station">
+								尼崎【HS09】 </span> <span class="rightbox traininfoname">阪神車両(△)</span> <span
+								class="rightbox trainno">5232</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">東花園～河内花園</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="23-2-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_501_0.html?innerLink=true&amp;senku=1&amp;current=23&amp;dest=233&amp;type="
+							id="stop-station-23-2-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="24" data-stationcode="n0088"></div> <a class="modal-open"
+				data-target="modal24-3"> <span class="trainparts" data-x="3" data-y="24"> <img
+						src="img/train_l_06.png" />
+					<div class="trainDelayTimeLeft center">
+						<p>+01</p>
+					</div>
+				</span></a>
+			<div class="modal-content" id="modal24-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								尼崎【HS09】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">5270</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れ：1分</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">東花園３番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="24-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=24&amp;dest=233&amp;type="
+							id="stop-station-24-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="25"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="26" data-stationcode="n0089"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="27"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="28" data-stationcode="n0090"></div> <a class="modal-open"
+				data-target="modal28-4"> <span class="trainparts" data-x="4" data-y="28"> <img
+						src="img/train_r_06.png" /> </span></a>
+			<div class="modal-content" id="modal28-4">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								大和西大寺【A26】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">5271</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">枚岡</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="28-4-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_1.html?innerLink=true&amp;senku=1&amp;current=28&amp;dest=22&amp;type="
+							id="stop-station-28-4-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="29"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="30" data-stationcode="n0091"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="31"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="32" data-stationcode="n0092"></div> <a class="modal-open"
+				data-target="modal32-5"> <span class="trainparts" data-x="5" data-y="32"> <img
+						src="img/train_r_03.png" /> </span></a>
+			<div class="modal-content" id="modal32-5">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype3">急行</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">2233</span> <span class="rightbox">8両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">石切２番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="32-5-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_601_1.html?innerLink=true&amp;senku=1&amp;current=32&amp;dest=24&amp;type="
+							id="stop-station-32-5-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="33"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="34" data-stationcode="n0093"></div> <a class="modal-open"
+				data-target="modal34-3"> <span class="trainparts" data-x="3" data-y="34"> <img
+						src="img/train_l_05.png" />
+					<div class="trainDelayTimeLeft center">
+						<p>+01</p>
+					</div>
+				</span></a>
+			<div class="modal-content" id="modal34-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype5">区準</span> <span class="station">
+								大阪難波【A01】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">8252</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れ：1分</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">生駒４番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="34-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_701_0.html?innerLink=true&amp;senku=1&amp;current=34&amp;dest=1&amp;type="
+							id="stop-station-34-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="35"></div> <a class="modal-open" data-target="modal35-4"> <span
+					class="trainparts" data-x="4" data-y="35"> <img src="img/train_r_05.png" /> </span></a>
+			<div class="modal-content" id="modal35-4">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype5">区準</span> <span class="station">
+								大和西大寺【A26】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">8253</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">生駒～東生駒</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="35-4-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_701_1.html?innerLink=true&amp;senku=1&amp;current=35&amp;dest=22&amp;type="
+							id="stop-station-35-4-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="36" data-stationcode="n0094"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="37"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="38" data-stationcode="n0095"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="39"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="40" data-stationcode="n0096"></div> <a class="modal-open"
+				data-target="modal40-3"> <span class="trainparts" data-x="3" data-y="40"> <img
+						src="img/train_l_06.png" /> </span></a>
+			<div class="modal-content" id="modal40-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								尼崎【HS09】 </span> <span class="rightbox traininfoname">阪神車両(△)</span> <span
+								class="rightbox trainno">5272</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">学園前</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="40-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=40&amp;dest=233&amp;type="
+							id="stop-station-40-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="41"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="42" data-stationcode="n0097"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="43"></div> <a class="modal-open" data-target="modal43-4"> <span
+					class="trainparts" data-x="4" data-y="43"> <img src="img/train_r_05.png" /> </span></a>
+			<div class="modal-content" id="modal43-4">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype5">区準</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">8251</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">菖蒲池～大和西大寺</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="43-4-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_701_1.html?innerLink=true&amp;senku=1&amp;current=43&amp;dest=24&amp;type="
+							id="stop-station-43-4-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="44" data-stationcode="n0098"></div> <a class="modal-open"
+				data-target="modal44-5"> <span class="trainparts" data-x="5" data-y="44"> <img
+						src="img/train_r_multi.png" /> </span></a>
+			<div class="modal-content" id="modal44-5">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype2">快急</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">5231</span> <span class="rightbox">8両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れ：2分</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">大和西大寺２番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="44-5-0">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_533_1.html?innerLink=true&amp;senku=1&amp;current=44&amp;dest=24&amp;type="
+							id="stop-station-44-5-0"> </iframe>
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> <span
+								class="ltdexpressbuy"><a class="sub-modal-open"
+									data-target="submodal44-5-2">特急券購入</a></span> </p>
+						<p class="margin_low"> <span class="traintype traintype1">特急</span> <span class="station">
+								近鉄奈良【A28】 </span> <span class="rightbox trainno">2207</span> <span
+								class="rightbox">4両編成</span> </p>
+						<p class="margin_low"> <span class="facilitylabel">シート</span> <span><img class="facilityicon"
+									src="img/facility_ico_10.png" /></span> </p>
+						<p class="margin_low"> <span class="facilitylabel">設備</span> <span><img class="facilityicon"
+									src="img/facility_ico_25.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_20.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_21.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_23.png" /></span> <span><img class="facilityicon"
+									src="img/facility_ico_24.png" /></span> </p>
+						<p class="carinfo margin_low">コンセントは1,2,3,4号車</p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れ：1分</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">大和西大寺</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="44-5-1">&lt;</span> </span> </div> <!-- 下り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_372_1.html?innerLink=true&amp;senku=1&amp;current=44&amp;dest=24&amp;type="
+							id="stop-station-44-5-1"> </iframe>
+						<div class="modal-content" id="submodal44-5-2">
+							<div class="submodel-header"> <a class="submodal-close">×</a>
+								<h1>特急券購入</h1>
+							</div> <iframe class="submodal-ifinfo"
+								src="./buyticket/buyticket1_372_1.html?innerLink=true&amp;senku=1&amp;current=44&amp;dest=24&amp;type="></iframe>
+						</div>
+					</div>
+				</div>
+			</div> <a class="modal-open" data-target="modal44-1"> <span class="trainparts" data-x="1" data-y="44"> <img
+						src="img/train_l_other_06.png" />
+					<div class="trainDelayTimeLeft center">
+						<p>+01</p>
+					</div>
+				</span></a>
+			<div class="modal-content" id="modal44-1">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								京都【B01】 </span> <span class="rightbox trainno">2280</span> <span
+								class="rightbox">4両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れ：1分</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">大和西大寺４番または５番のりば</span>
+						</p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="44-1-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=44&amp;dest=27&amp;type="
+							id="stop-station-44-1-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="45"></div> <a class="modal-open" data-target="modal45-2"> <span
+					class="trainparts" data-x="2" data-y="45"> <img src="img/train_l_02.png" /> </span></a>
+			<div class="modal-content" id="modal45-2">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype2">快急</span> <span class="station">
+								大阪難波【A01】 </span> <span class="rightbox traininfoname">近鉄車両(○)</span> <span
+								class="rightbox trainno">5234</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">新大宮～大和西大寺</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="45-2-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_501_0.html?innerLink=true&amp;senku=1&amp;current=45&amp;dest=1&amp;type="
+							id="stop-station-45-2-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="46" data-stationcode="n0099"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="47"></div> <!-- celllist --> <!-- 乗り換え電車状況表示 -->
+			<div data-stationcode-row="48" data-stationcode="n0100"></div> <a class="modal-open"
+				data-target="modal48-3"> <span class="trainparts" data-x="3" data-y="48"> <img
+						src="img/train_l_06.png" /> </span></a>
+			<div class="modal-content" id="modal48-3">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>列車詳細</h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p class="margin_low"> <span><img class="image" src="img/train_ic.png" /></span> </p>
+						<p class="margin_low"> <span class="traintype traintype6">普通</span> <span class="station">
+								尼崎【HS09】 </span> <span class="rightbox traininfoname">阪神車両(△)</span> <span
+								class="rightbox trainno">5274</span> <span class="rightbox">6両編成</span> </p>
+						<p class="delay margin_low"> <span>遅れ状況</span><span class="rightbox">遅れなし</span> </p>
+						<p class="border margin_low"> <span>現在位置</span><span class="rightbox">近鉄奈良１番のりば</span> </p>
+						<div class="accordion-box">停車駅ご案内 <span class="allow-up-down"> <span class="allow-text"
+									data-stop-station-icon="48-3-0">&lt;</span> </span> </div> <!-- 上り --> <iframe
+							class="stop-info" src="about:blank"
+							data-src="./stopinfo/stopinfo1_751_0.html?innerLink=true&amp;senku=1&amp;current=48&amp;dest=233&amp;type="
+							id="stop-station-48-3-0"> </iframe>
+					</div>
+				</div>
+			</div> <!-- celllist --> <!-- 乗り換え電車状況表示 --> <!-- rowlist --> <!-- 駅リンクエリア --> <!-- 駅リンク --> <a
+				class="modal-open" data-target="stationArea18-A09"><span class="stationArea" data-y="18"
+					data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea18-A09">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A09</span> <span class="station">八戸ノ里
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0085&amp;line_code=n003&amp;direction=up&amp;name=%E5%85%AB%E6%88%B8%E3%83%8E%E9%87%8C">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0085&amp;line_code=n003&amp;direction=down&amp;name=%E5%85%AB%E6%88%B8%E3%83%8E%E9%87%8C">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03008.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄バス（八戸ノ里駅前）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E5%85%AB%E6%88%B8%E3%83%8E%E9%87%8C%E9%A7%85%E5%89%8D&amp;frsk=B&amp;tosk=&amp;dgmpl=%E5%85%AB%E6%88%B8%E3%83%8E%E9%87%8C%E9%A7%85%E5%89%8D&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea36-A18"><span class="stationArea"
+					data-y="36" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea36-A18">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A18</span> <span class="station">東生駒
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0094&amp;line_code=n003&amp;direction=up&amp;name=%E6%9D%B1%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0094&amp;line_code=n003&amp;direction=down&amp;name=%E6%9D%B1%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03017.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（東生駒駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=107"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea16-A08"><span class="stationArea"
+					data-y="16" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea16-A08">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A08</span> <span class="station">河内小阪
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0084&amp;line_code=n003&amp;direction=up&amp;name=%E6%B2%B3%E5%86%85%E5%B0%8F%E9%98%AA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0084&amp;line_code=n003&amp;direction=down&amp;name=%E6%B2%B3%E5%86%85%E5%B0%8F%E9%98%AA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03007.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄バス（小阪駅前）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E5%B0%8F%E9%98%AA%E9%A7%85%E5%89%8D&amp;frsk=B&amp;tosk=&amp;dgmpl=%E5%B0%8F%E9%98%AA%E9%A7%85%E5%89%8D&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜カーシェアリング＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄河内小阪駅</span> <span class="rightbox"> <a
+									href="https://station.orix-carshare.com/orix-carshare/spot/detail?code=st27457">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea34-A17"><span class="stationArea"
+					data-y="34" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea34-A17">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A17</span> <span class="station">生　駒
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0093&amp;line_code=n003&amp;direction=up&amp;name=%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0093&amp;line_code=n003&amp;direction=down&amp;name=%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">王寺方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0093&amp;line_code=n008&amp;direction=down&amp;name=%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">コスモスクエア方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0093&amp;line_code=n010&amp;direction=up&amp;name=%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">学研奈良登美ヶ丘方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0093&amp;line_code=n010&amp;direction=down&amp;name=%E7%94%9F%E9%A7%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03016.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（生駒駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=-2"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜カーシェアリング＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄生駒駅</span> <span class="rightbox"> <a
+									href="https://station.orix-carshare.com/orix-carshare/spot/detail?code=st27453">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea14-A07"><span class="stationArea"
+					data-y="14" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea14-A07">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A07</span> <span class="station">河内永和
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03006.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">ＪＲ西日本（おおさか東線）</span> <span class="rightbox"> <a
+									href="https://www.train-guide.westjr.co.jp/osakahigashi.html?st=8005"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea12-A06"><span class="stationArea"
+					data-y="12" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea12-A06">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A06</span> <span class="station">布　施
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0006&amp;line_code=n003&amp;direction=up&amp;name=%E5%B8%83%E6%96%BD">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0006&amp;line_code=n003&amp;direction=down&amp;name=%E5%B8%83%E6%96%BD">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">大阪上本町方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0006&amp;line_code=n001&amp;direction=up&amp;name=%E5%B8%83%E6%96%BD">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">河内国分・五十鈴川・鳥羽方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0006&amp;line_code=n001&amp;direction=down&amp;name=%E5%B8%83%E6%96%BD">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station02008.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄バス（布施駅前）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E5%B8%83%E6%96%BD%E9%A7%85%E5%89%8D&amp;frsk=B&amp;tosk=&amp;dgmpl=%E5%B8%83%E6%96%BD%E9%A7%85%E5%89%8D&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea38-A19"><span class="stationArea"
+					data-y="38" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea38-A19">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A19</span> <span class="station">富　雄
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0095&amp;line_code=n003&amp;direction=up&amp;name=%E5%AF%8C%E9%9B%84">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0095&amp;line_code=n003&amp;direction=down&amp;name=%E5%AF%8C%E9%9B%84">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03018.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（富雄駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=356"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea10-A05"><span class="stationArea"
+					data-y="10" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea10-A05">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A05</span> <span class="station">今　里
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station02007.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜カーシェアリング＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄今里駅</span> <span class="rightbox"> <a
+									href="https://station.orix-carshare.com/orix-carshare/spot/detail?code=st27454">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea8-A04"><span class="stationArea"
+					data-y="8" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea8-A04">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A04</span> <span class="station">鶴　橋
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0004&amp;line_code=n003&amp;direction=up&amp;name=%E9%B6%B4%E6%A9%8B">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0004&amp;line_code=n003&amp;direction=down&amp;name=%E9%B6%B4%E6%A9%8B">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">大阪上本町方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0004&amp;line_code=n001&amp;direction=up&amp;name=%E9%B6%B4%E6%A9%8B">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">河内国分・五十鈴川・賢島・近鉄名古屋方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0004&amp;line_code=n001&amp;direction=down&amp;name=%E9%B6%B4%E6%A9%8B">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station02006.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">ＪＲ西日本（環状線）</span> <span class="rightbox"> <a
+									href="https://www.train-guide.westjr.co.jp/osakaloop.html?st=2507"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">大阪地下鉄（千日前線）</span> <span class="rightbox"> <a
+									href="https://www.osakametro.co.jp/"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea6-A03"><span class="stationArea"
+					data-y="6" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea6-A03">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A03</span> <span class="station">大阪上本町
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0003&amp;line_code=n003&amp;direction=up&amp;name=%E5%A4%A7%E9%98%AA%E4%B8%8A%E6%9C%AC%E7%94%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良・近鉄名古屋・賢島方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0003&amp;line_code=n003&amp;direction=down&amp;name=%E5%A4%A7%E9%98%AA%E4%B8%8A%E6%9C%AC%E7%94%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">河内国分・五十鈴川・鳥羽方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0003&amp;line_code=n001&amp;direction=down&amp;name=%E5%A4%A7%E9%98%AA%E4%B8%8A%E6%9C%AC%E7%94%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station02005.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪地下鉄（谷町線・千日前線）</span> <span class="rightbox"> <a
+									href="https://www.osakametro.co.jp/"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄バス（近鉄上本町駅）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E8%BF%91%E9%89%84%E4%B8%8A%E6%9C%AC%E7%94%BA%E9%A7%85&amp;frsk=B&amp;tosk=&amp;dgmpl=%E8%BF%91%E9%89%84%E4%B8%8A%E6%9C%AC%E7%94%BA%E9%A7%85&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜カーシェアリング＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄大阪上本町駅</span> <span class="rightbox"> <a
+									href="https://station.orix-carshare.com/orix-carshare/spot/detail?code=st27494">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea4-A02"><span class="stationArea"
+					data-y="4" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea4-A02">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A02</span> <span class="station">近鉄日本橋
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0002&amp;line_code=n003&amp;direction=up&amp;name=%E8%BF%91%E9%89%84%E6%97%A5%E6%9C%AC%E6%A9%8B">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0002&amp;line_code=n003&amp;direction=down&amp;name=%E8%BF%91%E9%89%84%E6%97%A5%E6%9C%AC%E6%A9%8B">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station01006.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪地下鉄（堺筋線・千日前線）</span> <span class="rightbox"> <a
+									href="https://www.osakametro.co.jp/"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea2-A01"><span class="stationArea"
+					data-y="2" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea2-A01">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A01</span> <span class="station">大阪難波
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄奈良・近鉄名古屋・賢島方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0001&amp;line_code=n003&amp;direction=down&amp;name=%E5%A4%A7%E9%98%AA%E9%9B%A3%E6%B3%A2">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">神戸三宮方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0001&amp;line_code=x001&amp;direction=up&amp;name=%E5%A4%A7%E9%98%AA%E9%9B%A3%E6%B3%A2">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station01005.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">ＪＲ西日本（大和路線）</span> <span class="rightbox"> <a
+									href="https://www.train-guide.westjr.co.jp/yamatoji.html"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">南海電鉄（南海線）</span> <span class="rightbox"> <a
+									href="nankaiapp://launch/?func=tid&amp;lid=32001&amp;sid=3200101&amp;kid=kintetsu">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">南海電鉄（高野線）</span> <span class="rightbox"> <a
+									href="nankaiapp://launch/?func=tid&amp;lid=32007&amp;sid=3200101&amp;kid=kintetsu">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">大阪地下鉄（御堂筋・四つ橋・千日前線）</span> <span class="rightbox"> <a
+									href="https://www.osakametro.co.jp/"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">阪神電鉄（阪神なんば線）</span> <span class="rightbox"> <a
+									href="hanshin-train-apl://?dstpage=1&amp;ln_code=2&amp;st_code=121&amp;from=1"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea20-A10"><span class="stationArea"
+					data-y="20" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea20-A10">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A10</span> <span class="station">若江岩田
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0086&amp;line_code=n003&amp;direction=up&amp;name=%E8%8B%A5%E6%B1%9F%E5%B2%A9%E7%94%B0">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0086&amp;line_code=n003&amp;direction=down&amp;name=%E8%8B%A5%E6%B1%9F%E5%B2%A9%E7%94%B0">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03009.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄バス（若江岩田）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E8%8B%A5%E6%B1%9F%E5%B2%A9%E7%94%B0&amp;frsk=B&amp;tosk=&amp;dgmpl=%E8%8B%A5%E6%B1%9F%E5%B2%A9%E7%94%B0&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea42-A21"><span class="stationArea"
+					data-y="42" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea42-A21">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A21</span> <span class="station">菖蒲池
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0097&amp;line_code=n003&amp;direction=up&amp;name=%E8%8F%96%E8%92%B2%E6%B1%A0">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0097&amp;line_code=n003&amp;direction=down&amp;name=%E8%8F%96%E8%92%B2%E6%B1%A0">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03020.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（あやめ池駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=421"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea40-A20"><span class="stationArea"
+					data-y="40" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea40-A20">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A20</span> <span class="station">学園前
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0096&amp;line_code=n003&amp;direction=up&amp;name=%E5%AD%A6%E5%9C%92%E5%89%8D">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0096&amp;line_code=n003&amp;direction=down&amp;name=%E5%AD%A6%E5%9C%92%E5%89%8D">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03019.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（学園前駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=-1"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜カーシェアリング＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄学園前駅</span> <span class="rightbox"> <a
+									href="https://station.orix-carshare.com/orix-carshare/spot/detail?code=st27468">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea24-A12"><span class="stationArea"
+					data-y="24" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea24-A12">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A12</span> <span class="station">東花園
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0088&amp;line_code=n003&amp;direction=up&amp;name=%E6%9D%B1%E8%8A%B1%E5%9C%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0088&amp;line_code=n003&amp;direction=down&amp;name=%E6%9D%B1%E8%8A%B1%E5%9C%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03011.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄バス（東花園駅前）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E6%9D%B1%E8%8A%B1%E5%9C%92%E9%A7%85%E5%89%8D&amp;frsk=B&amp;tosk=&amp;dgmpl=%E6%9D%B1%E8%8A%B1%E5%9C%92%E9%A7%85%E5%89%8D&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea46-A27"><span class="stationArea"
+					data-y="46" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea46-A27">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A27</span> <span class="station">新大宮
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮・京都・国際会館方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0099&amp;line_code=n003&amp;direction=up&amp;name=%E6%96%B0%E5%A4%A7%E5%AE%AE">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0099&amp;line_code=n003&amp;direction=down&amp;name=%E6%96%B0%E5%A4%A7%E5%AE%AE">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03022.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（新大宮駅前）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=2383"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea22-A11"><span class="stationArea"
+					data-y="22" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea22-A11">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A11</span> <span class="station">河内花園
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0087&amp;line_code=n003&amp;direction=up&amp;name=%E6%B2%B3%E5%86%85%E8%8A%B1%E5%9C%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0087&amp;line_code=n003&amp;direction=down&amp;name=%E6%B2%B3%E5%86%85%E8%8A%B1%E5%9C%92">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03010.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄バス（花園駅前）</span> <span class="rightbox"> <a
+									href="https://kintetsu-bus.jorudan.biz/busstatepole?mode=4&amp;fr=%E8%8A%B1%E5%9C%92%E9%A7%85%E5%89%8D&amp;frsk=B&amp;tosk=&amp;dgmpl=%E8%8A%B1%E5%9C%92%E9%A7%85%E5%89%8D&amp;p=0%2C14">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea44-A26"><span class="stationArea"
+					data-y="44" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea44-A26">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A26</span> <span class="station">大和西大寺
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0098&amp;line_code=n003&amp;direction=up&amp;name=%E5%A4%A7%E5%92%8C%E8%A5%BF%E5%A4%A7%E5%AF%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0098&amp;line_code=n003&amp;direction=down&amp;name=%E5%A4%A7%E5%92%8C%E8%A5%BF%E5%A4%A7%E5%AF%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">京都・国際会館方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0098&amp;line_code=n005&amp;direction=up&amp;name=%E5%A4%A7%E5%92%8C%E8%A5%BF%E5%A4%A7%E5%AF%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">天理・橿原神宮前方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0098&amp;line_code=n006&amp;direction=down&amp;name=%E5%A4%A7%E5%92%8C%E8%A5%BF%E5%A4%A7%E5%AF%BA">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03021.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（大和西大寺駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=167"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜カーシェアリング＞</span></p>
+						<p class="border"> <span class="leftbox">近鉄大和西大寺駅</span> <span class="rightbox"> <a
+									href="https://station.orix-carshare.com/orix-carshare/spot/detail?code=st27452">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea28-A14"><span class="stationArea"
+					data-y="28" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea28-A14">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A14</span> <span class="station">枚　岡
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03013.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea26-A13"><span class="stationArea"
+					data-y="26" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea26-A13">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A13</span> <span class="station">瓢箪山
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0089&amp;line_code=n003&amp;direction=up&amp;name=%E7%93%A2%E7%AE%AA%E5%B1%B1">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0089&amp;line_code=n003&amp;direction=down&amp;name=%E7%93%A2%E7%AE%AA%E5%B1%B1">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03012.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea48-A28"><span class="stationArea"
+					data-y="48" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea48-A28">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A28</span> <span class="station">近鉄奈良
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・神戸三宮・京都・国際会館方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0100&amp;line_code=n003&amp;direction=up&amp;name=%E8%BF%91%E9%89%84%E5%A5%88%E8%89%AF">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03023.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜乗換案内＞</span></p>
+						<p class="border"> <span class="leftbox">奈良交通（近鉄奈良駅）</span> <span class="rightbox"> <a
+									href="https://navi.narakotsu.co.jp/timetable/?stop=37"> <img class="linkimg"
+										src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea32-A16"><span class="stationArea"
+					data-y="32" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea32-A16">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A16</span> <span class="station">石　切
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜列車出発案内＞</span></p>
+						<p class="border"> <span class="leftbox">大阪難波・尼崎方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0092&amp;line_code=n003&amp;direction=up&amp;name=%E7%9F%B3%E5%88%87">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p class="border"> <span class="leftbox">近鉄奈良方面</span> <span class="rightbox"> <a
+									href="launchkintetsuapp://ikisakiannai?station_code=n0092&amp;line_code=n003&amp;direction=down&amp;name=%E7%9F%B3%E5%88%87">
+									<img class="linkimg" src="img/btnlink.png" /></a></span> </p>
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03015.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 駅リンク --> <a class="modal-open" data-target="stationArea30-A15"><span class="stationArea"
+					data-y="30" data-direction="none"></span></a> <!-- 駅詳細モーダル -->
+			<div class="modal-content" id="stationArea30-A15">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1 class="stationinfo"> <span class="routetype routetypeA">A15</span> <span class="station">額　田
+							<span class="rightbox">&emsp;&emsp;</span> </span> </h1>
+				</div>
+				<div class="scrollArea">
+					<div class="scrollArea-box">
+						<p><span>＜駅情報＞</span></p>
+						<p class="border"> <span class="leftbox">駅情報はこちら</span> <span class="rightbox"> <a
+									href="http://www.kintetsu.co.jp/station/station_info/station03014.html"> <img
+										class="linkimg" src="img/btnlink.png" /></a></span> </p>
+					</div>
+				</div>
+			</div> <!-- 乗り換え駅+他路線リンクエリア --> <a href="trainlocationinfo03.html?innerLink=true&amp;line_id=n005">
+				<div data-x="2" data-y="43" class="otherStationArea"></div>
+			</a> <a href="trainlocationinfo04.html?innerLink=true&amp;line_id=n006">
+				<div data-x="1" data-y="45" class="otherStationArea"></div>
+			</a> <a href="trainlocationinfo02.html?innerLink=true&amp;line_id=n008">
+				<div data-x="1" data-y="35" class="otherStationArea"></div>
+			</a> <a href="trainlocationinfo07.html?innerLink=true&amp;line_id=n101">
+				<div data-x="1" data-y="13" class="otherStationArea"></div>
+			</a> <!-- 使い方 -->
+			<div id="transfer_help"> <a class="modal-open" data-target="modal_transfer_help"> <img id="transferHelpImg"
+						src="img/transfer_help.png" /> </a> </div> <!-- 使い方ポップアップ -->
+			<div class="modal-content" id="modal_transfer_help" style="width: 90%;">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>&emsp;</h1>
+				</div>
+				<div class="scrollArea">
+					<p> <img src="img/howto_traveling_position.png" /> </p>
+				</div>
+			</div> <!-- 停車駅案内ポップアップ -->
+			<div class="modal-content" id="modal_stopstation" style="width: 90%;">
+				<div class="header"> <a class="modal-close">×</a>
+					<h1>停車駅案内</h1>
+				</div>
+				<div class="scrollArea">
+					<p> <img src="img/stopstation1.png" /> </p>
+				</div>
+			</div>
+		</div> <!-- div id mainScrollArea end -->
+		<div id="footer"> <img src="img/footer01_A.png" />
+			<div class="center" id="directionlast">▼近鉄奈良方面</div>
+			<div id="bottomScrollArea">
+				<div id="bottomScrollTargetArea">
+					<div id="bottomScrollTarget"></div>
+				</div>
+			</div>
+			<div id="bottomBgDiv"> <img id="bottomBgImg" src="img/bottom_slider1.png" /> </div> <img id="footerImg2"
+				src="img/footer02.png" />
+			<div id="dispdate">
+				<div>画面表示日時</div>
+				<div>04/01 22:56</div>
+			</div>
+		</div> <!-- footer -->
+	</div> <!-- div id wrapper end --> <!-- 列車位置情報表示スクロール制御用JS -->
+	<script src="js/train_scroll_control.js" type="text/javascript"></script>
+</body>
+
+</html>
